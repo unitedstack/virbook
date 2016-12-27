@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [虚拟化概述](src/introduction/overview.md)
-    * [为什么要虚拟化？](src/introduction/why.md)
+    * [为什么有虚拟化？](src/introduction/why.md)
     * [虚拟化类型](src/introduction/VirtualizationType/preface.md)
         * [全虚拟化](src/introduction/virtualizatio_type/full_virtualization.md)
         * [半虚拟化](src/introduction/virtualization_type/para_virtualization.md)
