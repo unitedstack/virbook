@@ -12,7 +12,6 @@
         * [xen](src/introduction/solutions/xen.md)
         * [hyperV](src/introduction/solutions/hyperv.md)
         * [VirtualBox](src/introduction/solutions/virtualbox.md)
-    * [云计算简介](src/introduction/cloudcompute_intro.md)
 * [虚拟化基础](src/basis/overview.md)
     * [qemu+kvm](src/basis/qemu_kvm/preface.md)
         * [基础知识](src/basis/qemu_kvm/internals/preface.md)

@@ -8,10 +8,6 @@
 
 但是像Windows这样的操作系统，不能对系统进行更改，所以不能运行在半虚拟化的虚拟机里面，只能在外围设备驱动方面使用半虚拟化驱动提高虚拟机外围设备的性能，virtio是半虚拟化技术的一个典型应用。
 
-
-
-由VMM来提供API以及Guest的虚拟户调用
-
 参考链接：
 
 1. [http://blog.csdn.net/jmilk/article/details/51824935](http://blog.csdn.net/jmilk/article/details/51824935)
