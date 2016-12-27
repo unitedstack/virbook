@@ -1,0 +1,1113 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CPU · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="memory.html" />
+    
+    
+    <link rel="prev" href="relationship.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../introduction/overview.html">
+            
+                <a href="../../../introduction/overview.html">
+            
+                    
+                    虚拟化概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../introduction/why.html">
+            
+                <a href="../../../introduction/why.html">
+            
+                    
+                    为什么要虚拟化？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../introduction/VirtualizationType/preface.md">
+            
+                <span>
+            
+                    
+                    虚拟化类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../introduction/virtualizatio_type/full_virtualization.html">
+            
+                <a href="../../../introduction/virtualizatio_type/full_virtualization.html">
+            
+                    
+                    全虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../introduction/virtualization_type/para_virtualization.html">
+            
+                <a href="../../../introduction/virtualization_type/para_virtualization.html">
+            
+                    
+                    半虚拟化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../introduction/solutions/preface.md">
+            
+                <span>
+            
+                    
+                    虚拟化方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../introduction/solutions/kvm.md">
+            
+                <span>
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../../introduction/solutions/vmware.md">
+            
+                <span>
+            
+                    
+                    vmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../../introduction/solutions/xen.md">
+            
+                <span>
+            
+                    
+                    xen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../../introduction/solutions/hyperv.md">
+            
+                <span>
+            
+                    
+                    hyperV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../../introduction/solutions/virtualbox.md">
+            
+                <span>
+            
+                    
+                    VirtualBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../../introduction/cloudcompute_intro.md">
+            
+                <span>
+            
+                    
+                    云计算简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../overview.html">
+            
+                <a href="../../overview.html">
+            
+                    
+                    虚拟化基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../preface.md">
+            
+                <span>
+            
+                    
+                    qemu+kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="preface.html">
+            
+                <a href="preface.html">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1.1" data-path="qemu_device_model.html">
+            
+                <a href="qemu_device_model.html">
+            
+                    
+                    qemu设备模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.2" data-path="relationship.html">
+            
+                <a href="relationship.html">
+            
+                    
+                    qemu、kvm+qemu关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.1.3" data-path="cpu.html">
+            
+                <a href="cpu.html">
+            
+                    
+                    CPU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.4" data-path="memory.html">
+            
+                <a href="memory.html">
+            
+                    
+                    内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.5" data-path="network.md">
+            
+                <span>
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.6" data-path="storage.md">
+            
+                <span>
+            
+                    
+                    存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.7" data-path="cgroup.md">
+            
+                <span>
+            
+                    
+                    cgroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.8" data-path="image_format.md">
+            
+                <span>
+            
+                    
+                    镜像格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.9" data-path="intel.md">
+            
+                <span>
+            
+                    
+                    Intel虚拟化技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.10" data-path="graphics.md">
+            
+                <span>
+            
+                    
+                    图形界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.11" data-path="vhost.md">
+            
+                <span>
+            
+                    
+                    vhost、vhost user
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.12" data-path="pci_passthrough.md">
+            
+                <span>
+            
+                    
+                    pci穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.1.13" data-path="virtio.md">
+            
+                <span>
+            
+                    
+                    virtio驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../highlevel_func/preface.md">
+            
+                <span>
+            
+                    
+                    高级功能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.2.1" data-path="../highlevel_func/device_assignment.md">
+            
+                <span>
+            
+                    
+                    设备绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.2" data-path="../highlevel_func/cpu_binding.md">
+            
+                <span>
+            
+                    
+                    CPU绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.3" data-path="../highlevel_func/qemu_monitor.md">
+            
+                <span>
+            
+                    
+                    QEMU监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2.4" data-path="../highlevel_func/hot_plug.md">
+            
+                <span>
+            
+                    
+                    热拔插
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../performace/preface.md">
+            
+                <span>
+            
+                    
+                    kvm性能调优
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.3.1" data-path="../performace/tools.md">
+            
+                <span>
+            
+                    
+                    调优工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3.2" data-path="../performace/tunned.md">
+            
+                <span>
+            
+                    
+                    TUNED AND TUNED-ADM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3.3" data-path="../performace/networking">
+            
+                <span>
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3.4" data-path="../performace/block.md">
+            
+                <span>
+            
+                    
+                    块设备读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3.5" data-path="../performace/mmemory.md">
+            
+                <span>
+            
+                    
+                    内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3.6" data-path="../performace/numa.md">
+            
+                <span>
+            
+                    
+                    NUMA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../periphery/preface.md">
+            
+                <span>
+            
+                    
+                    周边
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.4.1" data-path="../periphery/qga.md">
+            
+                <span>
+            
+                    
+                    qemu guest agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4.2" data-path="../periphery/virtv2v.md">
+            
+                <span>
+            
+                    
+                    virt-v2v
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4.3" data-path="../periphery/p2v.md">
+            
+                <span>
+            
+                    
+                    P2V
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../others.md">
+            
+                <span>
+            
+                    
+                    其他虚拟化方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../management/overview.html">
+            
+                <a href="../../../management/overview.html">
+            
+                    
+                    虚拟化管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../management/libvirt.md">
+            
+                <span>
+            
+                    
+                    libvirt简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../management/lanuage_binding.md">
+            
+                <span>
+            
+                    
+                    python绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../management/virsd.md">
+            
+                <span>
+            
+                    
+                    virsh命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../management/migration/preface.md">
+            
+                <span>
+            
+                    
+                    虚拟机迁移
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../../management/migration/cold_migration.md">
+            
+                <span>
+            
+                    
+                    冷迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../../management/migration/live_migration.md">
+            
+                <span>
+            
+                    
+                    热迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../management/snap/preface.md">
+            
+                <span>
+            
+                    
+                    虚拟机快照
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../../management/snap/disk.md">
+            
+                <span>
+            
+                    
+                    磁盘快照
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../../management/snap/memory.md">
+            
+                <span>
+            
+                    
+                    内存快照
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../../management/snap/checkpoint.md">
+            
+                <span>
+            
+                    
+                    恢复点快照
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../contaniner/overview.md">
+            
+                <span>
+            
+                    
+                    容器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../container/ecology.md">
+            
+                <span>
+            
+                    
+                    容器技术生态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../container/diff_and_integration.md">
+            
+                <span>
+            
+                    
+                    容器、虚拟化技术区别与整合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >CPU</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ol>
+<li><p>&#x591A;CPU&#x534F;&#x540C;&#x5DE5;&#x4F5C;</p>
+<ul>
+<li>SMP</li>
+<li>MPP</li>
+<li>NUMA</li>
+<li>NUMA-Q</li>
+</ul>
+</li>
+<li><p>CPU &#x4EB2;&#x548C;&#x6027;&#xFF08;affinita&#xFF09;</p>
+<p> &#x8F6F;&#x4EB2;&#x548C;&#x6027;&#x610F;&#x5473;&#x7740;&#x8FDB;&#x7A0B;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x5904;&#x7406;&#x5668;&#x4E4B;&#x95F4;&#x9891;&#x7E41;&#x8FC1;&#x79FB;&#xFF0C;&#x800C;&#x786C;&#x4EB2;&#x548C;&#x6027;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8FDB;&#x7A0B;&#x9700;&#x8981;&#x5728;&#x60A8;&#x6307;&#x5B9A;&#x7684;&#x5904;&#x7406;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x3002;</p>
+<p> &#x7B80;&#x5355;&#x5730;&#x8BF4;&#xFF0C;CPU &#x4EB2;&#x548C;&#x6027;&#xFF08;affinity&#xFF09; &#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x8981;&#x5728;&#x67D0;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684; CPU &#x4E0A;&#x5C3D;&#x91CF;&#x957F;&#x65F6;&#x95F4;&#x5730;&#x8FD0;&#x884C;&#x800C;&#x4E0D;&#x88AB;&#x8FC1;&#x79FB;&#x5230;&#x5176;&#x4ED6;&#x5904;&#x7406;&#x5668;&#x7684;&#x503E;&#x5411;&#x6027;&#x3002;Linux &#x5185;&#x6838;&#x8FDB;&#x7A0B;&#x8C03;&#x5EA6;&#x5668;&#x5929;&#x751F;&#x5C31;&#x5177;&#x6709;&#x88AB;&#x79F0;&#x4E3A; &#x8F6F; CPU &#x4EB2;&#x548C;&#x6027;&#xFF08;affinity&#xFF09; &#x7684;&#x7279;&#x6027;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x8FDB;&#x7A0B;&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x5728;&#x5904;&#x7406;&#x5668;&#x4E4B;&#x95F4;&#x9891;&#x7E41;&#x8FC1;&#x79FB;&#x3002;&#x8FD9;&#x79CD;&#x72B6;&#x6001;&#x6B63;&#x662F;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FDB;&#x7A0B;&#x8FC1;&#x79FB;&#x7684;&#x9891;&#x7387;&#x5C0F;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4EA7;&#x751F;&#x7684;&#x8D1F;&#x8F7D;&#x5C0F;&#x3002;</p>
+<p> Linux Kernel 2.0&#x4E4B;&#x540E;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;CPU&#x7684;&#x786C;&#x4EB2;&#x548C;&#x6027;&#xFF0C;&#x5373;&#xFF1A;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x7684;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x5728;&#x54EA;&#x4E2A;&#x6216;&#x8005;&#x54EA;&#x4E9B;&#x7269;&#x7406;CPU&#x4E0A;&#x8FD0;&#x884C;&#x3002;</p>
+<ul>
+<li><p>Linux&#x5185;&#x6838;&#x7684;&#x786C;&#x4EB2;&#x548C;&#x6027;</p>
+<p>  &#x5728; Linux &#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x79F0;&#x4E3A; task_struct&#x3002;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x539F;&#x56E0;&#x6709;&#x5F88;&#x591A;&#xFF1B;&#x5176;&#x4E2D;&#x4E0E;&#x4EB2;&#x548C;&#x6027;&#xFF08;affinity&#xFF09;&#x76F8;&#x5173;&#x5EA6;&#x6700;&#x9AD8;&#x7684;&#x662F; cpus_allowed &#x4F4D;&#x63A9;&#x7801;&#x3002;&#x8FD9;&#x4E2A;&#x4F4D;&#x63A9;&#x7801;&#x7531; n &#x4F4D;&#x7EC4;&#x6210;&#xFF0C;&#x4E0E;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684; n &#x4E2A;&#x903B;&#x8F91;&#x5904;&#x7406;&#x5668;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002; &#x5177;&#x6709; 4 &#x4E2A;&#x7269;&#x7406; CPU &#x7684;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x6709; 4 &#x4F4D;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E9B; CPU &#x90FD;&#x542F;&#x7528;&#x4E86;&#x8D85;&#x7EBF;&#x7A0B;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x5C31;&#x6709;&#x4E00;&#x4E2A; 8 &#x4F4D;&#x7684;&#x4F4D;&#x63A9;&#x7801;&#x3002;&#x6BCF;&#x4E00;&#x4F4D;&#x63A9;&#x7801;&#x5BF9;&#x5E94;&#x7CFB;&#x7EDF;&#x4E2D;&#x4E00;&#x4E2A;&#x903B;&#x8F91;CPU&#x3002;
+  &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x8981;&#x4F7F;&#x7528;&#x67D0;&#x4E2A; CPU&#xFF0C;&#x5219;&#x8BE5;&#x8BE5;&#x8FDB;&#x7A0B;&#x7684; task_struct &#x4E2D;&#x7684; cpu_allowed &#x5C5E;&#x6027;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E;&#x76F8;&#x5E94;&#x903B;&#x8F91; CPU &#x7684;&#x90A3;&#x4E00;&#x4F4D;&#x63A9;&#x7801;&#xFF0C;&#x5E94;&#x8BE5;&#x7F6E;&#x4E3A; 1&#xFF0C; &#x53CD;&#x4E4B;&#xFF0C;&#x5219;&#x7F6E;&#x8BE5;&#x4F4D;&#x4E3A; 0&#xFF0C; &#x8FD9;&#x4E0E;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x7F51;&#x7EDC;&#x63A9;&#x7801;&#x7684;&#x6982;&#x5FF5;&#x6BD4;&#x8F83;&#x7C7B;&#x4F3C;&#x3002;Linux &#x4E2D;&#xFF0C;&#x8981;&#x60F3;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x6240;&#x6709;&#x7684;&#x903B;&#x8F91; CPU&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5C06;&#x63A9;&#x7801;&#x7684;&#x6240;&#x6709;&#x4F4D;&#x5747;&#x7F6E;&#x4E3A; 1&#xFF0C;&#x8FD9;&#x4E5F;&#x662F; Linux &#x8FDB;&#x7A0B;&#x7684;&#x7F3A;&#x7701;&#x72B6;&#x6001;&#x3002;
+  Linux &#x5185;&#x6838; API &#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x6216;&#x8005;&#x67E5;&#x770B;&#x63A9;&#x7801;&#xFF0C;&#x4ED6;&#x4EEC;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
+<ul>
+<li>sched_set_affinity()  &#x4FEE;&#x6539;&#x8FDB;&#x7A0B;&#x63A9;&#x7801;</li>
+<li>sched_get_affinity()  &#x67E5;&#x8BE2;&#x8FDB;&#x7A0B;&#x63A9;&#x7801;
+&#x6CE8;&#x610F;&#xFF1A;sched_set_affinity()&#x5177;&#x6709;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x5373;&#xFF1A;&#x4F1A;&#x5C06;cpus_allowd&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x8FDB;&#x7A0B;&#x6216;&#x8005;&#x7EBF;&#x7A0B;&#x3002;</li>
+</ul>
+</li>
+<li><p>KVM &#x4F7F;&#x7528;&#x786C;&#x4EB2;&#x548C;&#x6027;</p>
+<p>  &#x901A;&#x5E38; Linux &#x5185;&#x6838;&#x90FD;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x5BF9;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x8C03;&#x5EA6;&#xFF0C;&#x5728;&#x5E94;&#x8BE5;&#x8FD0;&#x884C;&#x7684; CPU &#x4E0A;&#x8FD0;&#x884C;&#x8FDB;&#x7A0B;&#xFF08;&#x8FD9;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5728;&#x53EF;&#x7528;&#x7684;&#x5904;&#x7406;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x5E76;&#x83B7;&#x5F97;&#x5F88;&#x597D;&#x7684;&#x6574;&#x4F53;&#x6027;&#x80FD;&#xFF09;&#x3002;&#x5185;&#x6838;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x7528;&#x6765;&#x68C0;&#x6D4B; CPU &#x4E4B;&#x95F4;&#x4EFB;&#x52A1;&#x8D1F;&#x8F7D;&#x8FC1;&#x79FB;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x8FDB;&#x7A0B;&#x8FC1;&#x79FB;&#x6765;&#x964D;&#x4F4E;&#x7E41;&#x5FD9;&#x7684;&#x5904;&#x7406;&#x5668;&#x7684;&#x538B;&#x529B;&#x3002;
+  &#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x53EA;&#x9700;&#x4F7F;&#x7528;&#x7F3A;&#x7701;&#x7684;&#x8C03;&#x5EA6;&#x5668;&#x884C;&#x4E3A;&#xFF08;Linux &#x8F6F;&#x4EB2;&#x548C;&#x6027;&#xFF09;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4F1A;&#x5E0C;&#x671B;&#x5728;&#x865A;&#x62DF;&#x5316;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; Linux &#x7684;&#x786C;&#x4EB2;&#x548C;&#x6027;&#x6765;&#x63D0;&#x9AD8;&#x865A;&#x62DF;&#x673A;&#x7684;&#x6027;&#x80FD;&#x53CA;&#x7A33;&#x5B9A;&#x6027;&#x3002;</p>
+<ul>
+<li>&#x865A;&#x62DF;&#x673A;&#x7528;&#x6765;&#x505A;&#x5927;&#x6570;&#x636E;&#x5904;&#x7406;&#xFF0C;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x3002;&#x5F53;&#x5229;&#x7528; Linux &#x786C;&#x4EB2;&#x548C;&#x6027;&#x6307;&#x5B9A;&#x4E86;&#x76F8;&#x5E94;&#x7684;&#x903B;&#x8F91; CPU &#x7EC4;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x8FDB;&#x7A0B;&#x5728; CPU &#x4E4B;&#x95F4;&#x7684;&#x5207;&#x6362;&#xFF0C;&#x63D0;&#x9AD8;&#x7F13;&#x5B58;&#x547D;&#x4E2D;&#x7387;&#xFF0C;&#x540C;&#x65F6;&#x51CF;&#x5C11;&#x8FDB;&#x7A0B;&#x5207;&#x6362;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x63D0;&#x9AD8;&#x865A;&#x62DF;&#x673A;&#x7684;&#x8BA1;&#x7B97;&#x6027;&#x80FD;&#x3002;</li>
+<li>&#x53C8;&#x6216;&#x8005;&#x865A;&#x62DF;&#x673A;&#x662F;&#x7528;&#x6765;&#x8DD1;&#x5BA2;&#x6237;&#x7684;&#x5173;&#x952E;&#x4E1A;&#x52A1;&#x65F6;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="relationship.html" class="navigation navigation-prev " aria-label="Previous page: qemu、kvm+qemu关系">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="memory.html" class="navigation navigation-next " aria-label="Next page: 内存">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CPU","level":"1.3.1.1.3","depth":4,"next":{"title":"内存","level":"1.3.1.1.4","depth":4,"path":"src/basis/qemu_kvm/internals/memory.md","ref":"src/basis/qemu_kvm/internals/memory.md","articles":[]},"previous":{"title":"qemu、kvm+qemu关系","level":"1.3.1.1.2","depth":4,"path":"src/basis/qemu_kvm/internals/relationship.md","ref":"src/basis/qemu_kvm/internals/relationship.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/basis/qemu_kvm/internals/cpu.md","mtime":"2016-12-27T14:11:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-27T12:23:36.281Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
