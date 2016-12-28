@@ -142,7 +142,7 @@ xml文件定义domain的方式：
 **4. 停止和重启domain**
 ```
 
- **   4. 停止domain:**
+**   4. 停止domain:**
 
 ```
 # virsh shutdown <domain>
