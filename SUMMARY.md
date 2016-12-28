@@ -49,6 +49,7 @@
     * [libvirt简介](src/management/libvirt.md)
     * [python绑定](src/management/lanuage_binding.md)
     * [virsh命令](src/management/virsd.md)
+	    * [虚拟机生命周期管理](src/management/cli/vm_lifecycle.md)
     * [虚拟机迁移](src/management/migration/preface.md)
         * [冷迁移](src/management/migration/cold_migration.md)
         * [热迁移](src/management/migration/live_migration.md)
