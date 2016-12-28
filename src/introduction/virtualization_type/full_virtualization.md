@@ -6,7 +6,7 @@
 
 软件辅助全虚拟化的实现图：
 
-![](/assets/1.png)
+![](/images/introduction/virtualization_type/soft_virtualization.png)
 
 如上图，VMM和Guest OS是运行在Ring3用户态的应用程序。理论上来说，用户态的应用程序是没有权限操作硬件的，但是在全虚拟化中，当客户机的内核执行特权指令（实际上是用户态指令）时，由于它并不知道自己所处的是虚拟环境，所以会像发送普通的IO一样发送数据，被Hypervisor拦截，因此会触发异常，然而VMM会捕获这些异常指令并将其虚拟化成只针对虚拟CPU起作用的虚拟特权指令。但是由于当初设计标准x86架构CPU时，并没有考虑到要支持虚拟化技术，所以会存在一部分特权指令运行在Ring 1用户态上，而这些运行在Ring 1上的特权指令并不会触发异常然后再被VMM捕获。从而导致在GuestOS中执行的特权指令直接对HostOS造成了影响\(GuestOS和HostOS没能做到完全隔离\)。
 
@@ -16,7 +16,7 @@
 
 硬件辅助全虚拟化的实现图：
 
-![](/assets/hvm.png)
+![](/images/introduction/virtualization_type/hvm.png)
 
 硬件虚拟化是通过硬件的协助，比如使用支持虚拟化功能的CPU进行支撑，如上图，硬件辅助的全虚拟化方式中GuestOS直接运行在Ring0，由VMM充当宿主机，直接运行在硬件平台上。VMM会将虚拟化模块加载到Host的内核中。从而提高虚拟机运行效率的技术，Intel CPU的VT和AMD CPU的AMD-V都是在CPU上实现的硬件虚拟化技术，在虚拟机使用CPU的时候，虚拟机管理软件VMM将CPU切换到一个硬件虚拟化专用的运行模式，这样可以让虚拟机相对于直接运行在物理CPU上，可以执行绝大部分指令，只有少部分影响物理机的指令会被拦截，比如关机这样的指令，不能因为一台虚拟机执行了关机指令而把宿主机关闭了，所以被拦截的指令需要交给VMM进行虚拟化处理，令其只对虚拟机生效，KVM是使用硬件虚拟化技术的一个典型应用。M通过在HostOS内核中加载KVM Kernel Module来将HostOS转换成为一个VMM。
 
@@ -33,6 +33,4 @@
 ```
 # grep "svm" /proc/cpuinfo
 ```
-
-
 
