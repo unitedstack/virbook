@@ -6,41 +6,41 @@
 
 操作步骤如下：
 
-1. 关闭指定需要执行离散迁移的虚拟机
+1.关闭指定需要执行离散迁移的虚拟机，以虚拟机instance-00000717为例：
 
 ```bash
-# virsh shutdown instance-00000717
+[root@server-68.103.hatest.ustack.in ~ ]$ virsh shutdown instance-00000717
 ```
 
 查看该虚拟机状态：
 
 ```bash
-[root@server-68]$ virsh list --all
+[root@server-68.103.hatest.ustack.in ~ ]$ virsh list --all
  Id    Name                           State
 ----------------------------------------------------
  5     instance-00000719              running
  -     instance-000006a8              shut off
- -     instance-00000717              shut off
+ -     instance-00000717              shut off     # 已关闭
  -     instance-0000071a              shut off
  -     instance-0000071c              shut off
 ```
 
-1. 下载该虚拟机的配置文件到717.xml：
+2.下载该虚拟机的配置文件到717.xml：
 
 ```bash
-[root@server-68]$ virsh dumpxml instance-00000717 > 717.xml
+[root@server-68.103.hatest.ustack.in ~ ]$ virsh dumpxml instance-00000717 > 717.xml
 ```
 
-1. 拷贝该虚拟机的配置文件到目的宿主机的对应目录下：
+3.拷贝该虚拟机的配置文件到目的宿主机的对应目录下：
 
 ```bash
-[root@server-68]$ scp 717.xml root@10.0.103.69 /etc/libvirt/qemu
+[root@server-68.103.hatest.ustack.in ~ ]$ scp 717.xml root@10.0.103.69 /etc/libvirt/qemu
 ```
 
-1. 切换到目的宿主机控制台`/etc/libvirt/qemu`目录下，定义该xml文件：
+4.切换到目的宿主机控制台`/etc/libvirt/qemu`目录下，定义该xml文件：
 
 ```bash
-[root@server-69]$ virsh define 717.xml 
+[root@server-69.103.hatest.ustack.in ~ ]$ virsh define 717.xml 
 Domain instance-00000717 defined from 717.xml
 ```
 
@@ -62,20 +62,43 @@ Domain instance-00000717 defined from 717.xml
     </interface>
 ```
 
-1. 在开启该虚拟机前，首先需要在目的宿主机上做如下准备操作：
+5.在开启该虚拟机前，首先需要在目的宿主机上做如下准备操作：
 
 ```
-[root@server-69]$ mkdir /var/lib/nova/instances/36969fe2-2f19-43f8-994d-91a4a04b8abe/
-[root@server-69]$ touch console.log
-[root@server-69]$ brctl addbr qbrd0c34abd-b3
+[root@server-69.103.hatest.ustack.in ~ ]$ mkdir /var/lib/nova/instances/36969fe2-2f19-43f8-994d-91a4a04b8abe/
+[root@server-69.103.hatest.ustack.in ~ ]$ touch console.log
+[root@server-69.103.hatest.ustack.in ~ ]$ brctl addbr qbrd0c34abd-b35
 ```
 
-1. 开启虚拟机：
+6.开启虚拟机：
 
 ```
-[root@server-69]$ virsh start instance-00000717
+[root@server-69.103.hatest.ustack.in ~ ]$ virsh start instance-00000717
 Domain instance-00000717 started
 ```
 
+7.查看结果：
 
+```
+[root@server-69.103.hatest.ustack.in ~ ]$ virsh list
+ Id    Name                           State
+----------------------------------------------------
+ 32    node01                         running
+ 34    node02                         running
+ 37    test                           running
+ 57    instance-00000717              running
+```
+
+```
+[root@server-68.103.hatest.ustack.in ~ ]$ virsh list --all
+ Id    Name                           State
+----------------------------------------------------
+ 5     instance-00000719              running
+ 6     instance-0000071a              running
+ 8     instance-0000071c              running
+ -     instance-000006a8              shut off
+ -     instance-00000717              shut off
+```
+
+离线迁移成功，但是依然可以看到源宿主机上该虚拟机依然存在，但是处于关机状态，我们可以执行`virsh destory instance-00000717`将其彻底销毁。
 
