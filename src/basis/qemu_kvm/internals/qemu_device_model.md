@@ -36,5 +36,9 @@ QEMU在早期（2009之前）采用的是ad hoc模型，即点对点模式，相
 * 一个设备是另一个设备的组成部分（子设备）
 * 子设备反向连接至父设备。
 
-Qdev与QOM的区别主要表现在：设备之间的关系，设备命名以及设备的属性三个方面。具体请参考[wiki.qemu.org](http://wiki.qemu.org/Features/QOM)
+Qdev与QOM的区别主要表现在：设备之间的关系，设备命名以及设备的属性三个方面。
+
+### 参考链接
+
+[wiki.qemu.org](http://wiki.qemu.org/Features/QOM)
 
