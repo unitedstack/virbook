@@ -53,6 +53,7 @@
     * [虚拟机迁移](src/management/migration/preface.md)
         * [离线迁移](src/management/migration/cold_migration.md)
         * [在线迁移](src/management/migration/live_migration.md)
+        * [其他分类](src/management/migration/other_migration.md)
     * [虚拟机快照](src/management/snap/preface.md)
         * [磁盘快照](src/management/snap/disk.md)
         * [内存快照](src/management/snap/memory.md)

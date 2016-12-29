@@ -8,7 +8,7 @@
 
 1.查看所有处于运行状态的虚拟机，选定测试虚拟机为instance-00000717：
 
-```
+```bash
 [root@server-69.103.hatest.ustack.in ~ ]$ virsh list 
  Id    Name                           State
 ----------------------------------------------------
@@ -21,21 +21,21 @@
 
 1. 在目的宿主机上做如下准备操作：
 
-   ```
+```bash
    [root@server-68.103.hatest.ustack.in ~ ]$ mkdir /var/lib/nova/instances/36969fe2-2f19-43f8-994d-91a4a04b8abe/
    [root@server-68.103.hatest.ustack.in ~ ]$ touch console.log
    [root@server-68.103.hatest.ustack.in ~ ]$ brctl addbr qbrd0c34abd-b3
-   ```
+```
 
 2. 执行在线迁移命令：
 
-   ```
+```bash
    [root@server-69.103.hatest.ustack.in ~ ]$ virsh migrate instance-00000717 --live qemu+ssh://10.0.103.68/system --unsafe
-   ```
+```
 
 3. 查看结果，迁移成功：
 
-```
+```bash
 [root@server-69.103.hatest.ustack.in ~ ]$ virsh list --all
  Id    Name                           State
 ----------------------------------------------------
@@ -46,13 +46,11 @@
  -     instance-00000717              shut off
 ```
 
-```
+```bash
 [root@server-68.103.hatest.ustack.in ~ ]$ virsh list
  Id    Name                           State
 ----------------------------------------------------
  5     instance-00000719              running
  13    instance-00000717              running
 ```
-
-
 

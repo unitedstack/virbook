@@ -64,7 +64,7 @@ Domain instance-00000717 defined from 717.xml
 
 5.在开启该虚拟机前，首先需要在目的宿主机上做如下准备操作：
 
-```
+```bash
 [root@server-69.103.hatest.ustack.in ~ ]$ mkdir /var/lib/nova/instances/36969fe2-2f19-43f8-994d-91a4a04b8abe/
 [root@server-69.103.hatest.ustack.in ~ ]$ touch console.log
 [root@server-69.103.hatest.ustack.in ~ ]$ brctl addbr qbrd0c34abd-b35
@@ -72,14 +72,14 @@ Domain instance-00000717 defined from 717.xml
 
 6.开启虚拟机：
 
-```
+```bash
 [root@server-69.103.hatest.ustack.in ~ ]$ virsh start instance-00000717
 Domain instance-00000717 started
 ```
 
 7.查看结果：
 
-```
+```bash
 [root@server-69.103.hatest.ustack.in ~ ]$ virsh list
  Id    Name                           State
 ----------------------------------------------------
@@ -89,7 +89,7 @@ Domain instance-00000717 started
  57    instance-00000717              running
 ```
 
-```
+```bash
 [root@server-68.103.hatest.ustack.in ~ ]$ virsh list --all
  Id    Name                           State
 ----------------------------------------------------
@@ -100,5 +100,5 @@ Domain instance-00000717 started
  -     instance-00000717              shut off
 ```
 
-离线迁移成功，但是依然可以看到源宿主机上该虚拟机依然存在，但是处于关机状态，我们可以执行`virsh destory instance-00000717`将其彻底销毁。
+离线迁移成功，但是依然可以看到源宿主机上该虚拟机依然存在，但是处于关机状态，我们可以执行`virsh undefine instance-00000717`将其彻底销毁。
 
