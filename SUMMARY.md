@@ -47,6 +47,7 @@
     * [其他虚拟化方案](src/basis/others.md)
 * [虚拟化管理](src/management/overview.md)
     * [libvirt简介](src/management/libvirt.md)
+    * [libvirt配置](src/management/config.md)
     * [python绑定](src/management/lanuage_binding.md)
     * [virsh命令](src/management/virsh.md)
         * [虚拟机生命周期管理](src/management/cli/vm_lifecycle.md)
