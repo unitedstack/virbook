@@ -1,9 +1,13 @@
+## 迁移的分类方式
+
 ### 一、数据传输方式
 
 从上一篇中迁移的实现过程我们可以看到，虚拟机的迁移其实就是数据的迁移，从这个角度来看，libvirt中数据的传送方式可以分为如下两种：
 
 - Native方式：利用虚拟机本身在两个宿主机之间迁移
 - Tunnel方式：利用libvirtd后台进程迁移
+
+
 #### Native方式
 
 Hypervisor原生传输数据的方式一般不支持数据的加密，该功能是否支持依赖于Hypervisor本身。但是这种传输方式消耗的资源少。
@@ -42,7 +46,7 @@ Hypervisor原生传输数据的方式一般不支持数据的加密，该功能�
 
 QEMU Driver支持如下几种迁移方式：
 
-1. Native migration, client to two libvirtd servers
+（1）Native migration, client to two libvirtd servers
 
 ```bash
 用法：virsh migrate GUESTNAME DEST-LIBVIRT-URI [HV-URI]
@@ -55,20 +59,20 @@ QEMU Driver支持如下几种迁移方式：
 [root@server-68.103.hatest.ustack.in ~ ]$ virsh migrate instance-0000071e qemu://10.0.103.69/system tcp://10.0.103.69/
 ```
 
-2. Native migration, client and peer2peer between, two libvirtd servers
+（2）Native migration, client and peer2peer between, two libvirtd servers
 	
 此模式下不能使用virsh
 
-3. Tunnelled migration, client and peer2peer between two libvirtd servers 
+（3）Tunnelled migration, client and peer2peer between two libvirtd servers 
 
 此模式下不能使用virsh
 
-4. Native migration, peer2peer between two libvirtd servers 
+（4）Native migration, peer2peer between two libvirtd servers 
 
 ```bash
 [root@server-68.103.hatest.ustack.in ~ ]$ virsh migrate --p2p instance-0000071d qemu+ssh://10.0.103.69/system
 ```
-5. Tunnelled migration, peer2peer between two libvirtd servers
+（5）Tunnelled migration, peer2peer between two libvirtd servers
 
 ```bash
 [root@server-68.103.hatest.ustack.in ~ ]$ virsh migrate --p2p --tunnelled instance-0000071e qemu+ssh://10.0.103.69/system

@@ -27,10 +27,11 @@ libvirt配置文件在`/etc/libvirt/`目录下，其一层目录树如下：
 
 **需要注意的参数**
 1. `uri_aliases`：配置一些常用libvirt连接的别名。通过virsh调用这个别名与远程主机的libvirt连接。
-
-    uri_aliases = [
-      "server-69=qemu+ssh://root@10.0.103.69/system",
-    ]
+```
+uri_aliases = [
+  "server-69=qemu+ssh://root@10.0.103.69/system",
+]
+```
 
 操作如下：
 
@@ -73,3 +74,7 @@ libvirt配置文件在`/etc/libvirt/`目录下，其一层目录树如下：
 └── networks
     └── autostart
 ```
+
+### 参考文档
+
+1. http://smilejay.com/2013/03/libvirt-configuration-and-usage/
