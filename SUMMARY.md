@@ -14,8 +14,9 @@
         * [VirtualBox](src/introduction/solutions/virtualbox.md)
 * [虚拟化基础](src/basis/overview.md)
     * [x86 架构及操作系统概述](src/basis/x86-架构及操作系统概述.md)
-    * [基于软件的完全虚拟化](src/basis/基于软件的完全虚拟化.md)
+    * [基于软件的全虚拟化](src/basis/基于软件的完全虚拟化.md)
     * [硬件辅助虚拟化](src/basis/硬件辅助虚拟化.md)
+    * 半虚拟化
     * [qemu+kvm](src/basis/qemu_kvm/preface.md)
         * [基础知识](src/basis/qemu_kvm/internals/preface.md)
             * [qemu设备模型](src/basis/qemu_kvm/internals/qemu_device_model.md)
