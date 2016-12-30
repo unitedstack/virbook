@@ -1,4 +1,4 @@
-## libvirt 配置
+# libvirt 配置
 
 libvirt配置文件在`/etc/libvirt/`目录下，其一层目录树如下：
 
@@ -75,6 +75,6 @@ uri_aliases = [
     └── autostart
 ```
 
-### 参考文档
+## 参考文档
 
 1. http://smilejay.com/2013/03/libvirt-configuration-and-usage/

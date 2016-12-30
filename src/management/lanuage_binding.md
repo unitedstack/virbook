@@ -1,7 +1,8 @@
-## Libvirt Python Binding
+# Libvirt Python Binding
 
 libvirt 是用C语言实现的API，在简介中我们已经提到，libvirt为其他更高层的管理工具和应用程序提供统一的虚拟化功能操作接口，由于其功能的强大但是语言的局限，libvirt API被封装成支持多种语言的API。包括 c#, go, java, ocaml. perl, python, php, ruby。
 
+## 示例
 以OpenStack项目所用语言为例，本章讲述libvirt Python API。
 
 在使用Python调用libvirt之前，我们需要安装libvirt-python软件包：
@@ -60,7 +61,7 @@ Dom instance-00000719  State 3 (after suspend)
 Dom instance-00000719  State 1 (after resume)
 ```
 
-### 参考文档
+## 参考文档
 
 1. http://blog.sina.com.cn/s/blog_da4487c40102v367.html
 2. https://libvirt.org/python.html
