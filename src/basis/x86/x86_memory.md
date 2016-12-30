@@ -38,3 +38,5 @@
 
 内存分页：http://wiki.osdev.org/Paging
 
+Memory Management：http://www.tldp.org/LDP/tlk/mm/memory.html
+
