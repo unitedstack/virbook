@@ -13,9 +13,9 @@
         * [hyperV](src/introduction/solutions/hyperv.md)
         * [VirtualBox](src/introduction/solutions/virtualbox.md)
 * [虚拟化基础](src/basis/overview.md)
-    * [x86 架构及操作系统概述](src/basis/x86-架构及操作系统概述.md)
-        * [x86 历史及操作系统概要](src/basis/x86-历史及操作系统概要.md)
-        * [x86 内存架构](src/basis/x86-内存架构.md)
+    * [x86 架构](src/basis/x86/preface.md)
+        * [x86 历史及操作系统概要](src/basis/x86/x86_history.md)
+        * [x86 内存架构](src/basis/x86/x86_memory.md)
         * x86 架构的基本运行环境
         * 中断与异常
         * 进程
