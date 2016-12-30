@@ -1,8 +1,8 @@
-## Libvirt Migration
+# Libvirt Migration
 
 将虚拟机从当前的宿主机迁移到目的宿主机的过程，即虚拟机的迁移。迁移过程主要是将当前宿主机上指定需要迁移的虚拟机的内存，磁盘，设备状态等迁移到到另一台宿主机，并根据这些信息在目的宿主机上启动该虚拟机。
 
-**一、虚拟机的迁移有如下好处**
+## 虚拟机的迁移有如下好处
 
 * **负载均衡**
 
@@ -20,7 +20,7 @@
 
   为实现更低的延迟或其他特殊情况，虚拟化机器可以转移到另一个物理位置。
 
-**二、虚拟机的迁移有如下两种方式**
+## 虚拟机的迁移分类
 
 * 离线迁移
 
@@ -33,8 +33,8 @@
 
 ### 参考资料
 
-1. [https://www.ibm.com/developerworks/cn/linux/l-cn-mgrtvm1/](https://www.ibm.com/developerworks/cn/linux/l-cn-mgrtvm1/)
-2. [Red Hat Enterprise Linux - virtualization](https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/7/html/Virtualization_Getting_Started_Guide/sec-migration.html#sec-benefits_of_migrating)
+1. 虚拟机迁移技术漫谈：https://www.ibm.com/developerworks/cn/linux/l-cn-mgrtvm1/
+2. Red Hat Enterprise Linux - virtualization：https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/7/html/Virtualization_Getting_Started_Guide/sec-migration.html#sec-benefits_of_migrating
 
 
 

@@ -77,4 +77,4 @@ uri_aliases = [
 
 ## 参考文档
 
-1. http://smilejay.com/2013/03/libvirt-configuration-and-usage/
+1. LIBVIRT、LIBVIRTD的配置和使用：http://smilejay.com/2013/03/libvirt-configuration-and-usage/

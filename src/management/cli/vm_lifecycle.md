@@ -1,8 +1,10 @@
+# 虚拟机生命周期管理
+
 这篇文章主要是从libvirt和OpenStack Nova的角度来讲述虚拟机生命周期的管理，包括虚拟机的创建、运行、暂停、删除等操作。
 
-### 基本概念
+##基本概念
 
-**一、domain的配置文件**
+###一、domain的配置文件
 
 在libvirt中，通常将虚拟机称为一个domain。我们可以看到在计算节点的/var/lib/nova/instances/instance\_uuid目录下有一个libvirt.xml文件，该文件描述了与该instance相关的所有信息，包括domain, network, storage, device等等。大体框架如下：
 
@@ -21,7 +23,7 @@
 </domain>
 ```
 
-**二、短暂性guest domain和持久性guest domain**
+###二、短暂性guest domain和持久性guest domain
 
 libvirt区分两种不同的domain：短暂性的（transient）和持久性的（persistent\):
 
@@ -34,7 +36,7 @@ libvirt区分两种不同的domain：短暂性的（transient）和持久性的�
 
 在动态创建和销毁短暂性domain之前，该domain其他所有组件（比如  存储、网络、设备等）必须已经存在。
 
-**三、domain的状态**
+###三、domain的状态
 
 一个gust domain可以处于一下状态：
 
@@ -48,9 +50,9 @@ libvirt区分两种不同的domain：短暂性的（transient）和持久性的�
 
 从上面的图可以看出，在创建短暂性的domain时候，状态直接从undefined变成running；而在创建持久性domain时，需提前定义然后再启动，状态由undefined变为defined然后是running。
 
-### 基本操作
+## 基本操作
 
-1. **定义domain**
+###1. 定义domain
 
 在运行domain之前，我们必须定义它。有两种方式可以用来创建domain，一种是使用命令行，另一种则是通过xml定义。以下属于命令行的创建方式：
 
@@ -119,7 +121,7 @@ xml文件定义domain的方式：
 </domain>
 ```
 
-**2. 编辑domain**
+### 2. 编辑domain
 
 刚刚定义了一个虚拟机，若我们现在想修改某些配置，可以使用以下命令：
 
@@ -127,7 +129,7 @@ xml文件定义domain的方式：
 # virsh edit <domain>
 ```
 
-**3. 启动domain**
+### 3. 启动domain
 
 当我们创建完虚拟机的xml文件之后，我们可以通过以下命令启动虚拟机：
 
@@ -138,11 +140,8 @@ xml文件定义domain的方式：
 
 注意：domain-id是随机分配的，关机后就没有了，所以启动domain只能用domain-name或者domain-uuid。
 
-```bash
-**4. 停止和重启domain**
-```
 
-**4. 停止domain:**
+### 4. 停止和重启domain
 
 ```bash
 # virsh shutdown <domain>
@@ -162,13 +161,13 @@ xml文件定义domain的方式：
 # virsh destory <domain>
 ```
 
-**5. 启动domain**
+### 5. 启动domain
 
 ```bash
 # virsh start <domain>
 ```
 
-**6. 挂起domain**
+### 6. 挂起domain
 
 挂起domain，是虚拟机处于暂停状态，不可做一切操作。
 
@@ -176,7 +175,7 @@ xml文件定义domain的方式：
 # virsh suspend <domain>
 ```
 
-**7. 恢复被挂起的domain**
+### 7. 恢复被挂起的domain
 
 恢复被挂起的domain，是虚拟机处于active状态。
 
@@ -184,9 +183,9 @@ xml文件定义domain的方式：
 # virsh resume <domain>
 ```
 
-### 参考资料
+## 参考文档
 
-1. [http://wiki.libvirt.org/page/VM\_lifecycle](http://wiki.libvirt.org/page/VM_lifecycle)
+1. libvirt-VM_lifecycle：http://wiki.libvirt.org/page/VM_lifecycle
 
 
 

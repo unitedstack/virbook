@@ -25,11 +25,11 @@ Python语言提供了到libvirt C语言函数的比较完整的绑定，绑定�
 `virConnectListDomains`函数被替换为`virDomain::listDomainsID(self)`，它返回一个由域ID组成的列表，表示当前正在运行的域。
 `virDomainGetInfo`函数被替换为`virDomain::info()`，它返回一个含有五个元素的列表，列表内容为：
 
-1. state: 状态值；
-2. maxMemory: 域的最大内存容量；
-3. memory: 域当前使用的内存量；
-4. nbVirtCPU: vCPU的数量；
-5. cpuTime: 域使用的CPU时间（nanoseconds单位）。
+1. state：状态值；
+2. maxMemory：域的最大内存容量；
+3. memory：域当前使用的内存量；
+4. nbVirtCPU：vCPU的数量；
+5. cpuTime：域使用的CPU时间（nanoseconds单位）。
 
 以下是python调用python libvirt API的简单示例：
 
@@ -63,5 +63,5 @@ Dom instance-00000719  State 1 (after resume)
 
 ## 参考文档
 
-1. http://blog.sina.com.cn/s/blog_da4487c40102v367.html
-2. https://libvirt.org/python.html
+1. libvirt API的Python语言绑定：http://blog.sina.com.cn/s/blog_da4487c40102v367.html
+2. Python API Binding：https://libvirt.org/python.html

@@ -1,6 +1,15 @@
-## 迁移的分类方式
+# 迁移的其他分类方式
 
-### 一、数据传输方式
+虚拟机的迁移方式也可以从以下两个角度来分析：
+
+- 数据传输
+- 通信控制流
+
+
+
+
+
+## 数据传输
 
 从上一篇中迁移的实现过程我们可以看到，虚拟机的迁移其实就是数据的迁移，从这个角度来看，libvirt中数据的传送方式可以分为如下两种：
 
@@ -8,14 +17,14 @@
 - Tunnel方式：利用libvirtd后台进程迁移
 
 
-#### Native方式
+### Native方式
 
 Hypervisor原生传输数据的方式一般不支持数据的加密，该功能是否支持依赖于Hypervisor本身。但是这种传输方式消耗的资源少。
 使用这种方式传输数据的话需要管理员在部署主机时额外配置好hypervisor的网络。若要支持并发迁移，需要使用到多个网络端口，这样的情况就需要iptables提前开启这些tcp的端口。
 
 ![](/images/management/native_migration.png)
 
-#### Tunnel方式
+### Tunnel方式
 虚拟机的迁移主要由第三方libvirt来控制，通过libvirt的RPC调用，实现远程传输，且支持数据加密。
 
 但是这种方式存在其弊端：在源主机和目的主机中都会存在该虚拟机的副本，因为数据是在libvirt和Hypervisor之间传递。对于RAM很大的虚拟机来说，这个弊端会导致很快产生脏数据。
@@ -25,20 +34,20 @@ Hypervisor原生传输数据的方式一般不支持数据的加密，该功能�
 ![](/images/management/tunnel_migration.png)
 
 
-### 二、数据管理方式
+## 通信控制流
 
 虚拟机的迁移需要源主机、目的主机和第三方主机（如果有的话）之间，以及迁移需要调用的应用程序之间的密切协调合作。该过程中有两种数据管理方式：
 
-- Direct迁移
-- Peer to Peer迁移
+- Direct方式
+- Peer to Peer方式
 
-#### Direct迁移
+### Direct方式
 
 这种模式下，由libvirt客户端进程来控制整个迁移过程，因此，libvirt客户端需要与源主机和目的主机之间相连并得到它们的授权。这样的话，源主机和目的主机上的libvirtd进程就不需要相互通信。如果迁移过程中libvirt客户端崩溃，或者丢失了与libvirtd之间的连接，则libvirt客户端将尝试终止迁移过程并在原主机上重新启动虚拟机。若该操作无法安全的执行，所有主机上的虚拟机都将被暂停。
 
 ![](/images/management/direct_managed.png)
 
-#### Peer to Peer迁移
+### Peer to Peer方式
 
 这种模式下，libvirt客户端只与源主机的libvirtd守护进程通信，然后源主机的libvirtd通过直接连接目的主机的libvirtd守护进程来控制整个迁移过程。和Direct不同的是，如果出现迁移过程中libvirt客户端崩溃，或者丢失了与源主机libvirtd之间的连接，迁移过程依然会不间断的继续执行，直到迁移完成。需要注意的是，源主机认证（通常是root）链接到目的主机，而不是通过客户端应用链接到源主机。
 
@@ -79,5 +88,5 @@ QEMU Driver支持如下几种迁移方式：
 ```
 
 
-### 参考资料
-1.	[https://libvirt.org/migration.html](https://libvirt.org/migration.html)
+## 参考文档
+1.	libvirt migration：https://libvirt.org/migration.html

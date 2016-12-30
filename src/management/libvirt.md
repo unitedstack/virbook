@@ -1,4 +1,4 @@
-## 简介
+# 简介
 
 libvirt是一组软件的汇集，包括用C语言实现的API，一个守护进程（libvirtd），一个命令行工具（virsh）。该项目的目标是“提供一套**通用、稳定、安全**的虚拟化抽象层，用来管理**单个物理节点**上的虚拟机实例“以及其他虚拟化功能，为其他更高层的管理工具和应用程序提供统一的虚拟化功能操作接口。
 
@@ -22,11 +22,11 @@ Nova服务在OpenStack项目中的主要功能是提供大规模可扩展的，�
 
 Nova中所有的计算资源都由Hypervisor来管理，对于某些类型的Hypervisor，如KVM，LXC，QEMU等Hypervisor来说，资源管理功能都是通过调用libvirt的统一接口来实现。
 
-### 参考文档
+## 参考文档
 
-1. [https://wiki.archlinux.org/index.php/libvirt\_\(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87](https://wiki.archlinux.org/index.php/libvirt_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)\)
-2. [https://libvirt.org/docs.html](https://libvirt.org/docs.html)
-3. http://xstarcd.github.io/wiki/Cloud/redhat_libvirt_kvm.html
+1. libvirt-archlinux：https://wiki.archlinux.org/index.php/libvirt_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87
+2. libvirt官网：https://libvirt.org/docs.html
+3. 使用 libvirt创建和管理KVM虚拟机：http://xstarcd.github.io/wiki/Cloud/redhat_libvirt_kvm.html
 
 
 
