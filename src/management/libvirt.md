@@ -26,6 +26,7 @@ Nova中所有的计算资源都由Hypervisor来管理，对于某些类型的Hyp
 
 1. [https://wiki.archlinux.org/index.php/libvirt\_\(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87](https://wiki.archlinux.org/index.php/libvirt_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)\)
 2. [https://libvirt.org/docs.html](https://libvirt.org/docs.html)
+3. http://xstarcd.github.io/wiki/Cloud/redhat_libvirt_kvm.html
 
 
 
