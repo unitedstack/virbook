@@ -21,6 +21,7 @@
         * [进程](/src/basis/x86/process.md)
         * [I/O 架构](/src/basis/x86/io_arch.md)
     * [深入虚拟化技术](/src/basis/deep_into_vir_tech/preface.md)
+        * [CPU 虚拟化](/src/basis/deep_into_vir_tech/cpu.md)
     * [基于软件的全虚拟化](src/basis/基于软件的完全虚拟化.md)
     * [硬件辅助虚拟化](src/basis/硬件辅助虚拟化.md)
     * [半虚拟化](src/basis/半虚拟化.md)
