@@ -13,13 +13,14 @@
         * [hyperV](src/introduction/solutions/hyperv.md)
         * [VirtualBox](src/introduction/solutions/virtualbox.md)
 * [虚拟化基础](src/basis/overview.md)
-    * [x86 架构及操作系统概述](src/basis/x86-架构及操作系统概述.md)
-        * [x86 历史及操作系统概要](src/basis/x86-历史及操作系统概要.md)
-        * [x86 内存架构](src/basis/x86-内存架构.md)
-        * x86 架构的基本运行环境
-        * 中断与异常
-        * 进程
-        * I\/O 架构
+    * [x86 架构](src/basis/x86/preface.md)
+        * [x86 历史及操作系统概要](src/basis/x86/x86_history.md)
+        * [x86 内存架构](src/basis/x86/x86_memory.md)
+        * [x86 架构的基本运行环境](/src/basis/x86/x86_running_env.md)
+        * [中断与异常](/src/basis/x86/interrupt_and_exception.md)
+        * [进程](/src/basis/x86/process.md)
+        * [I/O 架构](/src/basis/x86/io_arch.md)
+    * [深入虚拟化技术](/src/basis/deep_into_vir_tech/preface.md)
     * [基于软件的全虚拟化](src/basis/基于软件的完全虚拟化.md)
     * [硬件辅助虚拟化](src/basis/硬件辅助虚拟化.md)
     * [半虚拟化](src/basis/半虚拟化.md)
