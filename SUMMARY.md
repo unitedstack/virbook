@@ -17,7 +17,7 @@
         * [x86 历史及操作系统概要](src/basis/x86/x86_history.md)
         * [x86 内存架构](src/basis/x86/x86_memory.md)
         * [x86 架构的基本运行环境](/src/basis/x86/x86_running_env.md)
-        * 中断与异常
+        * [中断与异常](/src/basis/x86/interrupt_and_exception.md)
         * 进程
         * I\/O 架构
     * [基于软件的全虚拟化](src/basis/基于软件的完全虚拟化.md)
