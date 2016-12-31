@@ -23,7 +23,7 @@ raw格式的最大特点是简单，使用`dd`命令就可以模拟一个raw格�
 ```bash
 [root@compute1 ~(keystone_admin)]# qemu-img create -f raw test.raw 4G
 Formatting 'test.raw', fmt=raw size=4294967296
-[root@compute1 ~(keystone_admin)]# qemu-img info test.raw 
+[root@compute1 ~(keystone_admin)]# qemu-img info test.raw
 image: test.raw
 file format: raw
 virtual size: 4.0G (4294967296 bytes)
@@ -33,18 +33,18 @@ disk size: 0
 
 raw格式还可以随时在原来的盘上追加空间，操作如下：
 ```bash
-[root@compute1 ~(keystone_admin)]# qemu-img info test.raw 
+[root@compute1 ~(keystone_admin)]# qemu-img info test.raw
 image: test.raw
 file format: raw
 virtual size: 4.0G (4294967296 bytes)
 disk size: 0
-[root@compute1 ~(keystone_admin)]# qemu-img info zero.raw 
+[root@compute1 ~(keystone_admin)]# qemu-img info zero.raw
 image: zero.raw
 file format: raw
 virtual size: 4.0G (4294967296 bytes)
 disk size: 4.0G
 [root@compute1 ~(keystone_admin)]# cat zero.raw test.raw > new.raw
-[root@compute1 ~(keystone_admin)]# qemu-img info new.raw 
+[root@compute1 ~(keystone_admin)]# qemu-img info new.raw
 image: new.raw
 file format: raw
 virtual size: 8.0G (8589934592 bytes)
@@ -63,17 +63,17 @@ qcow2 镜像格式是 QEMU 模拟器支持的一种磁盘镜像。它也是可�
 
 原理的具体实现方式可参考：https://www.ibm.com/developerworks/cn/linux/1409_qiaoly_qemuimgages/
 
-QEMU/KVM虚拟机的磁盘内部快照只支持qcow2格式。 
+QEMU/KVM虚拟机的磁盘内部快照只支持qcow2格式。
 在OpenStack环境中，使用ceph做后端存储时，为了实现Nova、Glance、Cinder统一存储快速创建虚拟机，必须使用raw格式的镜像，如果使用qcow2会导致创建虚拟机过程很慢（Nova会先下载镜像后台转成raw格式再启动）。
 
 和raw格式相比，qcow2格式不支持sparse文件。
 ```bash
-[root@compute1 ~(keystone_admin)]# qemu-img info test.raw 
+[root@compute1 ~(keystone_admin)]# qemu-img info test.raw
 image: test.raw
 file format: raw
 virtual size: 4.0G (4294967296 bytes)
 disk size: 0
-[root@compute1 ~(keystone_admin)]# qemu-img info test.qcow2 
+[root@compute1 ~(keystone_admin)]# qemu-img info test.qcow2
 image: test.qcow2
 file format: qcow2
 virtual size: 4.0G (4294967296 bytes)
@@ -87,7 +87,7 @@ Format specific information:
 ```
 可以看到，同样是4G的文件，test.raw不占用磁盘空间，test.qcow2占用了196k磁盘空间。
 
-###3. vmdk 
+###3. vmdk
 
 vmdk是vmware的镜像格式。如要从vmware将虚拟机迁移到OpenStack环境，首先在虚拟机关机前提下，拷贝虚拟机镜像到openstack平台中，目标节点需要预留足够的存储空间。然后将vmdk镜像格式转换为raw格式。
 
