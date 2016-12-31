@@ -1,4 +1,4 @@
-###VirtualBox
+# VirtualBox
 
 ![](/images/introduction/solutions/virtualboxlogo.png)
 
@@ -6,7 +6,7 @@
 aVirtualBox 是一款开源虚拟机软件。VirtualBox 是由德国 Innotek 公司开发，由Sun Microsystems公司出品的软件，使用Qt编写，在 Sun 被 Oracle 收购后正式更名成 Oracle VM VirtualBox。Innotek 以 GNU General Public License (GPL) 释出 VirtualBox，并提供二进制版本及 OSE 版本的代码。使用者可以在VirtualBox上安装并且执行Solaris、Windows、DOS、Linux、OS/2 Warp、BSD等系统作为客户端操作系统。现在则由甲骨文公司进行开发，是甲骨文公司xVM虚拟化平台技术的一部份。
 VirtualBox号称是最强的免费虚拟机软件，它不仅具有丰富的特色，而且性能也很优异！它简单易用，可虚拟的系统包括Windows（从Windows 3.1到Windows10、Windows Server 2012，所有的Windows系统都支持）、Mac OS X、Linux、OpenBSD、Solaris、IBM OS2甚至Android等操作系统！使用者可以在VirtualBox上安装并且运行上述的这些操作系统！ 与同性质的VMware及Virtual PC比较下，VirtualBox独到之处包括远端桌面协定（RDP）、iSCSI及USB的支持，VirtualBox在客户端操作系统上已可以支持USB 2.0的硬件装置，不过要安装 VirtualBox Extension Pack。
 
-####主要特点：
+## 主要特点
 
 - 支持64位客户端操作系统，即使主机使用32位CPU
 - 支持SATA硬盘NCQ技术
@@ -21,5 +21,5 @@ VirtualBox号称是最强的免费虚拟机软件，它不仅具有丰富的特�
 - iSCSI支持
 - USB与USB2.0支持
 
-####参考文档：
+## 参考文档
 官网：https://www.virtualbox.org/

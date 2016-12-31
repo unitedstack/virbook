@@ -1,4 +1,4 @@
-### VMware
+# VMware
 
 VMware是X86虚拟化软件的主流厂商之一，成立于1998年，并于2003年被EMC收购，VMware提供一系列的虚拟化产品，从服务器到桌面，可以运行于各种平台包括Windows，Linux 和Mac OS。近年来，VMware的产品线也延伸到数据中心和云计算等方面，形成了各个层次，各个领域的全覆盖。VMware的虚拟化产品主要有：
 - VMware ESX Server： 是VMware的旗舰产品，基于Hypervisor模型，直接运行在物理硬件上，无需操作系统，在性能和安全方面得到全面的优化。
